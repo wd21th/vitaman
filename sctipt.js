@@ -37,8 +37,9 @@ form.addEventListener('submit', function(e){
     console.log('formData :', formData.get('phoneNumber'));
     const chatId = '-875139516';
     const text = `Имя: ${formData.get('name')}, Телефон: ${formData.get('phoneNumber')}`;
+    const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
     
-    fetch(`https://api.telegram.org/bot5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws/sendMessage?chat_id=${chatId}&parse_mode=html&text=${text}`, {
+    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${text}`, {
         method: 'POST',
         body: formData
     })
