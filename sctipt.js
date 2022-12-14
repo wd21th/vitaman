@@ -36,11 +36,12 @@ form.addEventListener('submit', function(e){
     console.log('formData :', formData.get('name'));
     console.log('formData :', formData.get('phoneNumber'));
     const chatId = '-1001860607109';
+    const testChatId = '660419791'
     const text = `Имя: ${formData.get('name')}, Телефон: ${formData.get('phoneNumber')}`;
     const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
     
-    
-    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${text}`, {
+
+    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${testChatId}&parse_mode=html&text=${text}`, {
         method: 'POST',
         body: formData
     })
@@ -51,5 +52,17 @@ form.addEventListener('submit', function(e){
         console.log('error :', error);
     })
 
+
+    const website = 'https://script.google.com/macros/s/AKfycbziFrREB7JfQW4HfFEIiv_X1V5ewjHjLy-m91NaM74UHy_7YQlXFGIengy_ubUn1zU_2A/exec'
+
+    const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}`
+    fetch(website + query, {
+        method: 'GET'
+    }).then(function(response){
+        console.log('response :', response);
+    }
+    ).catch(function(error){
+        console.log('error :', error);
+    })
 
 })
