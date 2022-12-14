@@ -38,6 +38,13 @@
         flex-basis: 50%;
     }
 
+   
+
+    /* .peoples__review-item {
+        flex: 1 1 50%;
+    } */
+
+
 
 }
 
@@ -103,6 +110,8 @@
     .product-info__item {
         font-size: calc(12px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
     }
+    
+   
 
     .achievements-item__text {
         font-size: calc(12px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
@@ -113,5 +122,26 @@
 @media (max-width: 1024px) {
     .product-info {
         flex-wrap: wrap;
+    }
+
+    .peoples__review {
+        flex-direction: column;
+    }
+
+    .peoples__review .peoples__review-item {
+        margin-bottom: 116px;
+    }
+
+    /* last */
+    .peoples__review .peoples__review-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .peoples__review .peoples__review-item:nth-child(2) .people-review{
+        margin-top: 0;
+    }
+
+    .reviews__header {
+        margin-bottom: 116px;
     }
 }
