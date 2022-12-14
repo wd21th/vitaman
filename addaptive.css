@@ -13,6 +13,10 @@
     /* .forest img {
         transform: translateY(0%);
     } */
+
+    .images {
+        transform: translateX(650px) translateY(0%);
+    }
 }
 
 /* при 1024 и 769 */

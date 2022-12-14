@@ -126,11 +126,16 @@ body .bg:nth-child(1) .container {
     gap: 10px;
 }
 
-.social__link{}.socials{}.socials__item{
+.social__link{
+    cursor: pointer;
+    color: #42682A;
+}
+
+.socials{}.socials__item{
     background: #FFFFFF;
     padding: 10px 10px;
     border-radius: 8px;
-    color: #42682A;
+    
 }
 
 .achievements{}.achievements-item{
