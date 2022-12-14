@@ -10,7 +10,7 @@ phoneNumber.addEventListener('focus', function(e){
 
 phoneNumber.addEventListener('input', function(e){
     if(e.inputType != "deleteContentBackward"){
-        const digits = e.target.value.replace(/\D/g, '');
+        let digits = e.target.value.replace(/\D/g, '');
         const field = e.target;
         
         if(digits.length == 4){
@@ -30,9 +30,15 @@ phoneNumber.addEventListener('input', function(e){
             field.value = digits.replace(secondStage, '+7 $2 $3 $4');
         }
         else {
-            // remove first digit
-            digits = digits.slice(1);
-            field.value = '+7 ' + digits
+            if(digits.length == 1){
+                field.value = '+7 ' + digits
+            }else {
+                // remove first digit
+                digits = digits.slice(1);
+                console.log('digits :', digits);
+                field.value = '+7 ' + digits
+            }
+            
         }
 
         // if(digits.length < 10) {
