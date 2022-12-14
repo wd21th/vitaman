@@ -74,8 +74,9 @@ body .bg:nth-child(1) .container {
     border-bottom-left-radius: 111px;
 }
 .forest img {
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
     /* height: 1000px; */
+    height: 100vh;
 }
 
 .forest.priority {
@@ -105,7 +106,8 @@ body .bg:nth-child(1) .container {
 
 .images {
     position: relative;
-    transform: translateX(80%) translateY(0%);
+    /* transform: translateX(80%) translateY(0%); */
+    transform: translateX(750px) translateY(0%);
     /* overflow: hidden; */
 }
 
