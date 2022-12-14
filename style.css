@@ -336,7 +336,8 @@ body .bg:nth-child(1) .container {
 .order{
     padding-top: 42px;
     padding-bottom: 42px;
-    font-family: 'Abhaya Libre' , sans-serif;
+    /* font-family: 'Abhaya Libre' , sans-serif; */
+    font-family: 'Open Sans' , sans-serif;
 }.order__form{}.order__form-button{
     background: #BBA212;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

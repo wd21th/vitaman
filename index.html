@@ -50,7 +50,7 @@
                             </span></div>
                         </div>
                         <div class="main-screen__buttons">
-                            <button id="getConsalt" class="main-screen__button">
+                            <button id="getConsalt" class="main-screen__button" href="#order">
                                 КОНСУЛЬТАТЦИЯ АЛУ
                             </button>
                         </div>
@@ -221,7 +221,7 @@
     </div>
     <div class="full-screen bg">
         <div class="container">
-            <div class="order">
+            <div class="order" id="order">
                 <div class="order__header">
                     <h1 class="order__header-title">
                         Успейте оставить заявку и получить <br>установку БЕСПЛАТНО
@@ -233,7 +233,7 @@
                             <input type="text" placeholder="Ваше имя">
                         </div>
                         <div class="order__form-item">
-                            <input type="text" placeholder="Ваш телефон">
+                            <input type="text" placeholder="Ваш телефон" id="phoneNumber" maxlength="15">
                         </div>
                         <div class="order__form-item">
                             <button class="order__form-button">Оставить заявку</button>
@@ -252,9 +252,10 @@
 
       
 
-      <script src="./jquery-3.6.2.min.js"></script>
+    <script src="./jquery-3.6.2.min.js"></script>
     <script src="./slick-1.8.1/slick/slick.min.js"></script>
     <script src="sctipt.js"></script>
     <script src="scroll.js"></script>
+    <script src="mask.js"></script>
 </body>
 </html>

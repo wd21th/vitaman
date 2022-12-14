@@ -2,7 +2,7 @@ const navbarToggler = document.querySelector(".navbar-toggler");
 const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
 
-navbarToggler.addEventListener("click", navbarTogglerClick);
+// navbarToggler.addEventListener("click", navbarTogglerClick);
 
 function navbarTogglerClick() {
   navbarToggler.classList.toggle("open-navbar-toggler");
@@ -11,9 +11,13 @@ function navbarTogglerClick() {
 
 // navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
 
-for(let i=0; i<navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", navbarLinkClick);
-}
+// for(let i=0; i<navbarLinks.length; i++) {
+//   navbarLinks[i].addEventListener("click", navbarLinkClick);
+// }
+
+var getConsalt = document.getElementById('getConsalt');
+console.log('getConsalt :', getConsalt);
+getConsalt.addEventListener('click', navbarLinkClick);
 
 function navbarLinkClick(event) {
 
