@@ -109,6 +109,28 @@ body .bg:nth-child(1) .container {
     /* overflow: hidden; */
 }
 
+.images__socials{
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    bottom: 0;
+    display: flex;
+    gap: 30px;
+    transform: translateX(50%) translateY(50%);
+}
+
+.social{
+    display: flex;
+    gap: 10px;
+}
+
+.social__link{}.socials{}.socials__item{
+    background: #FFFFFF;
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: #42682A;
+}
+
 .achievements{}.achievements-item{
     display: flex;
     align-items: center;
