@@ -129,7 +129,7 @@
     }
 
     .peoples__review .peoples__review-item {
-        margin-bottom: 116px;
+        margin-bottom: calc(116px + 10px) ;
     }
 
     /* last */

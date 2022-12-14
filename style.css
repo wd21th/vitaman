@@ -284,6 +284,17 @@ body .bg:nth-child(1) .container {
 .people-review__image img{
     
 }
+.people-review__video {
+    display: flex;
+    justify-content: center;
+    transform: translateY(50%);
+}
+.people-review__video div{
+    background: #FFFFFF;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
 
 .people-review__name{
     margin-bottom: 19px;
