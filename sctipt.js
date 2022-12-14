@@ -28,3 +28,26 @@ for(let i=0; i<playBtns.length; i++){
         
 //     })
 // })
+
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const formData = new FormData(form);
+    console.log('formData :', formData.get('name'));
+    console.log('formData :', formData.get('phoneNumber'));
+    const chatId = '-875139516';
+    const text = `Имя: ${formData.get('name')}, Телефон: ${formData.get('phoneNumber')}`;
+    
+    fetch(`https://api.telegram.org/bot5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws/sendMessage?chat_id=${chatId}&parse_mode=html&text=${text}`, {
+        method: 'POST',
+        body: formData
+    })
+    .then(function(response){
+        console.log('response :', response);
+    })
+    .catch(function(error){
+        console.log('error :', error);
+    })
+
+
+})
