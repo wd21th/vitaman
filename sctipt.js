@@ -6,8 +6,20 @@ $(document).ready(function(){
 
 const modal = document.querySelector('#modal');
 document.body.addEventListener('click', function(e){
-    modal.classList.remove('active');
-    
+    if(modal.classList.contains('active')){
+        modal.classList.remove('active');
+
+	    var iframe = document.querySelector( 'iframe');
+        if ( iframe ) {
+            // after 500ms, set the src attribute to the same value
+            // this will reload the iframe
+            setTimeout(() => {
+                var iframeSrc = iframe.src;
+                iframe.src = iframeSrc;
+            }, 500);
+        }
+       
+    }
 })
 
 const playBtns = document.querySelectorAll('.people__play');
