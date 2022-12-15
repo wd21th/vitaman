@@ -134,7 +134,7 @@
     }
 
     .peoples__review .peoples__review-item {
-        margin-bottom: calc(116px + 10px) ;
+        margin-bottom: calc(136px + 10px) ;
     }
 
     /* last */
@@ -147,7 +147,7 @@
     }
 
     .reviews__header {
-        margin-bottom: 116px;
+        margin-bottom: 136px;
     }
 
     .order__form form {

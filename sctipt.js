@@ -40,7 +40,7 @@ form.addEventListener('submit', function(e){
     const text = `Имя: ${formData.get('name')}, Телефон: ${formData.get('phoneNumber')}`;
     const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
 
-    
+    // ===========================================
     const website = 'https://script.google.com/macros/s/AKfycbziFrREB7JfQW4HfFEIiv_X1V5ewjHjLy-m91NaM74UHy_7YQlXFGIengy_ubUn1zU_2A/exec'
 
     const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}`
@@ -52,7 +52,7 @@ form.addEventListener('submit', function(e){
     ).catch(function(error){
         console.log('error :', error);
     })
-
+    // ===========================================
 
 
 
