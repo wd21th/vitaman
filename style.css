@@ -325,6 +325,10 @@ body .bg:nth-child(1) .container {
     padding: 10px 20px;
 }
 
+.people-review__video span {
+    color: #42682A;
+}
+
 .people-review__name{
     margin-bottom: 19px;
 }.peoples__review{
@@ -485,6 +489,9 @@ body .bg:nth-child(1) .container {
 .benefit__item{
     width: fit-content;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px
 }
 
 
