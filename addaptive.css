@@ -139,7 +139,14 @@
         display: flex;
         justify-content: center;
     }
+
+    .affirmative {
+        border-width: 3px;
+    }
   
+    .order__header-title {
+        font-size: calc(16px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    }
 
 }
 
