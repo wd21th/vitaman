@@ -127,6 +127,16 @@
         /* transform: translateY( calc(100% + 100px)) translateX(50%); */
         transform: translateY(-150%) translateX(0%);
     }
+
+    .main-screen__achievements {
+        margin-bottom: 40px;
+
+    }
+
+    .main-screen__discount {
+        display: flex;
+        justify-content: center;
+    }
   
 
 }

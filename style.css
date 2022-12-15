@@ -100,6 +100,30 @@ body .bg:nth-child(1) .container {
     z-index: 2;
 }
 
+.discount{
+    
+}.discount__text{
+    border-radius: 50%;
+    border: 5px solid #FFCE00;
+    color: #FFC700;
+    padding: 20px;
+    
+}.main-screen__discount{
+    display: none;
+}
+
+.discount__text h1 {
+    
+    font-weight: 700;
+    font-size: 32px;
+    
+}
+
+.discount__text h2 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
 .logo {
     margin-bottom: 30px;
 }
