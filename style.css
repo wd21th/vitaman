@@ -37,6 +37,7 @@ body .bg:nth-child(3) {
     background: #42682A url('./images/bg3.jpg');
     background-blend-mode: color-burn;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     
 }
 
@@ -44,6 +45,7 @@ body .bg:nth-child(4) {
     background: #DBF0CE url('./images/bg3.jpg');
     background-blend-mode: multiply;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 body .bg:nth-child(5) {
