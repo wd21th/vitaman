@@ -408,7 +408,10 @@ body .bg:nth-child(1) .container {
     color: #FFFFFF;
 }
 
-.order__form-item{}
+.order__form-item{
+    position: relative;
+    margin-bottom: 42px;
+}
 .order__form-item input{
     background: transparent;
     border: 1px solid #FFFFFF;
@@ -416,7 +419,7 @@ body .bg:nth-child(1) .container {
     border-radius: 20px;
     min-height: 85px;
     width: 100%;
-    margin-bottom: 42px;
+    
     font-weight: 700;
     
     font-size: calc(18px + 16 * (100vw / 1280));
@@ -430,7 +433,24 @@ body .bg:nth-child(1) .container {
     color: #FFFFFF;
 }
 
+input.error {
+    border: 1px solid red;
+}
 
+input + span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    font-size: calc(12px + 16 * (100vw / 1280));;
+    margin-left: 30px;
+}
+
+input.error + span {
+    color: red;
+    bottom: -30px;
+    opacity: 1;
+}
 
 .order__header{
     margin-bottom: 50px;
