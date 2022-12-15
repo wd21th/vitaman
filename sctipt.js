@@ -53,7 +53,8 @@ form.addEventListener('submit', function(e){
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-        }
+        }, 
+        mode: 'no-cors'
     }).then(function(response){
         console.log('response :', response);
     }
