@@ -126,6 +126,10 @@ body .bg:nth-child(1) .container {
     gap: 10px;
 }
 
+.socials.mobile {
+    display: none;
+}
+
 .social__link{
     cursor: pointer;
     color: #42682A;

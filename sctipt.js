@@ -51,7 +51,6 @@ form.addEventListener('submit', function(e){
     const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}`
     fetch(website + query, {
         method: 'GET',
-        mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
         }
