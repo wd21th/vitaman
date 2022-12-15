@@ -41,12 +41,22 @@ phoneNumber.addEventListener('input', function(e){
             
         }
 
-        // if(digits.length < 10) {
-        //     field.errorText = this.country == 'uz' ? '*Телефон рақами формати нотўғри' :  '*Неверный формат номера телефона'
-        //     field.error = true;
-        // }else if(digits.length == 10){
-        //     field.error = false;
-        // }
+        if(digits.length < 11){
+            this.classList.add('error');
+            this.nextElementSibling.innerHTML = '11 сан теріңіз';
+        }
+        else if(digits.length == 11){
+            this.classList.remove('error');
+            this.nextElementSibling.innerHTML = 'Телефон номеріңізді енгізіңіз';
+        }
     }
 });
 
+phoneNumber.addEventListener('keyup', function(e){
+    if(e.inputType == "deleteContentBackward") {
+        if(!this.value.length){
+            this.classList.add('error');
+            this.nextElementSibling.innerHTML = 'Телефон номеріңізді енгізіңіз';
+        }
+    }
+})

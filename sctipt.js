@@ -56,7 +56,12 @@ form.addEventListener('submit', function(e){
 
     if(formData.get('phoneNumber').trim() == ''){
         this.querySelector('[name="phoneNumber"]').classList.add('error');
-    } else {
+    } 
+    else if(formData.get('phoneNumber').replace(/\D/, '').length < 11){
+        this.querySelector('[name="phoneNumber"]').classList.add('error');
+        this.querySelector('[name="phoneNumber"]').nextElementSibling.innerHTML = '11 сан теріңіз';
+    }
+    else {
         this.querySelector('[name="phoneNumber"]').classList.remove('error');
     }
 
