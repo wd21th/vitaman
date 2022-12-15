@@ -480,3 +480,21 @@ body .bg:nth-child(1) .container {
 
 
 .modal__close{}.modal__content{}.modal__video{}
+
+
+.benefit__item{
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+
+    
+.benefits{}.people-review__benefits{}
+
+.benefits__wrapper {
+    margin: 0 auto;
+}
+/* last */
+.benefits__wrapper .benefits__item:last-child {
+    margin-bottom: 0;
+}
