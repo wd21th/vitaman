@@ -220,7 +220,7 @@ body .bg:nth-child(1) .container {
 }.main-screen__buttons{}.main-screen__header{
     margin-bottom: 30px;
     font-weight: 700;
-    font-size: calc(26px + 16 * (100vw / 1280));;
+    font-size: calc(26px + 16 * (100vw / 1280));
     text-transform: uppercase;
 }
 
@@ -240,6 +240,10 @@ body .bg:nth-child(1) .container {
     flex: 1 1 33.333333%;
     padding-left: 5px;
     padding-right: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -299,7 +303,7 @@ body .bg:nth-child(1) .container {
 
 .people{}.people__image{
     /* radial gradiend */
-  
+    margin-bottom: 10px;
 }
 
 .people__image-wrapper {
@@ -307,7 +311,12 @@ body .bg:nth-child(1) .container {
     border-radius: 50%;
     overflow: hidden;
 }
-.people__name{}.people__position{}
+.people__name{
+    font-weight: 700;
+}.people__position{
+    font-weight: 700;
+
+}
 
 .peoples{
     display: flex;
