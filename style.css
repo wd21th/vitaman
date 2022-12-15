@@ -36,12 +36,14 @@ body .bg:nth-child(2), body .bg:nth-child(6) {
 body .bg:nth-child(3) {
     background: #42682A url('./images/bg3.jpg');
     background-blend-mode: color-burn;
+    background-repeat: no-repeat;
     
 }
 
 body .bg:nth-child(4) {
     background: #DBF0CE url('./images/bg3.jpg');
     background-blend-mode: multiply;
+    background-repeat: no-repeat;
 }
 
 body .bg:nth-child(5) {
@@ -141,13 +143,18 @@ body .bg:nth-child(1) .container {
     z-index: 1000;
     bottom: 0;
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
     transform: translateX(50%) translateY(50%);
 }
 
 .social{
     display: flex;
-    gap: 10px;
+    margin: 0 15px;
+    /* gap: 10px; */
+}
+
+.social * {
+    margin: 0 5px;
 }
 
 .socials.mobile {
@@ -170,8 +177,12 @@ body .bg:nth-child(1) .container {
 .achievements{}.achievements-item{
     display: flex;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
     margin-bottom: 10px;
+}
+
+.achievements-item * {
+    margin: 0 2.5px;
 }
 
 .achievements .achievements-item:last-child {
@@ -294,12 +305,23 @@ body .bg:nth-child(1) .container {
     border-radius: 50%;
     overflow: hidden;
 }
-.people__name{}.people__position{}.peoples{
+.people__name{}.people__position{}
+
+.peoples{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 70px;
-}.peoples__item{}.they-choose{
+    
+}
+
+
+
+
+
+.peoples__item{
+    margin: 0 35px;
+
+}.they-choose{
     font-family: 'Raleway', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -547,6 +569,10 @@ input.error + span {
     display: flex;
     align-items: center;
     gap: 5px
+}
+
+.benefit__item * {
+    margin: 0 2.5px;
 }
 
 

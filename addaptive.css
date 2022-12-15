@@ -122,10 +122,14 @@
     .socials.mobile {
         display: flex;
         bottom: 100%;
-        gap: 20px;
+        /* gap: 20px; */
         /* left: 50%; */
         /* transform: translateY( calc(100% + 100px)) translateX(50%); */
         transform: translateY(-150%) translateX(0%);
+    }
+
+    .socials.mobile .socials__item {
+        margin: 0 10px;
     }
 
     .main-screen__achievements {
