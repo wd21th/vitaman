@@ -153,4 +153,8 @@
     .order__form form {
         width: 100%;
     }
+
+    .modal{
+        height: 300px;
+    }
 }
