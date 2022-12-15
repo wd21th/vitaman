@@ -76,7 +76,12 @@ form.addEventListener('submit', function(e){
         // ватсап сссылка
         // const text = `👨🏻‍💻Имя: ${formData.get('name')} 
         // 📞Телефон: ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
-        const text = `${formData.get('name')}%0A${formData.get('phoneNumber').replace(/\D/, '')}%0A${utm_source}`;
+        
+        let phTrim = formData.get('phoneNumber').replace(/\D/g, '');
+        // replace first 7 with 8
+        phTrim = phTrim.replace(/^7/, '8');
+        phTrim = phTrim.replace( /(\d{1})(\d{3})(\d{3})(\d{4})/, '8-$2-$3-$4');
+        const text = `${formData.get('name')}%0A${phTrim}%0A${utm_source}`;
 
 
         const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
