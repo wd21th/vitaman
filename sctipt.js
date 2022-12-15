@@ -109,10 +109,11 @@ form.addEventListener('submit', function(e){
             mode: 'no-cors'
         }).then(function(response){
 
-            swal("Ушпешно!", "Мы свяжемся с вами в ближайшее время", "success");
+            swal("Өтінім қабылданды!", "Сізбен жақын арада хабарласамыз", "success");
             form.reset();
         }).catch(function(error){
-            swal("Ошибка!", "Попробуйте еще раз", "error");
+            swal("Қателік!", "Біраз уақыттан кейін қайталап көріңіз", "error");
+            form.reset();
         })
 
     }

@@ -425,7 +425,7 @@ body .bg:nth-child(1) .container {
     border-radius: 20px;
     min-height: 85px;
     width: 100%;
-    font-family: 'Abhaya Libre' , sans-serif;
+    font-family: 'Open Sans' , sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: calc(16px + 16 * (100vw / 1280));
@@ -458,7 +458,7 @@ body .bg:nth-child(1) .container {
 }
 
 input.error {
-    border: 1px solid red;
+    border: 1px solid rgba(255, 206, 0, 1);
 }
 
 input + span {
@@ -471,7 +471,7 @@ input + span {
 }
 
 input.error + span {
-    color: red;
+    color: rgba(255, 206, 0, 1);
     bottom: -30px;
     opacity: 1;
 }
