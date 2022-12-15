@@ -53,10 +53,14 @@ phoneNumber.addEventListener('input', function(e){
 });
 
 phoneNumber.addEventListener('keyup', function(e){
+    let digits = e.target.value.replace(/\D/g, '');
     // if(e.inputType == "deleteContentBackward") {
-        if(!this.value.length){
+        if(!digits.length){
             this.classList.add('error');
             this.nextElementSibling.innerHTML = 'Телефон номеріңізді енгізіңіз';
+        }else if(digits.length < 11){
+            this.classList.add('error');
+            this.nextElementSibling.innerHTML = '11 сан теріңіз';
         }
     // }
 })
