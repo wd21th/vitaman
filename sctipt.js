@@ -1,9 +1,3 @@
-$(document).ready(function(){
-    $('.your-class').slick({
-        // setting-name: setting-value
-    });
-});
-
 const modal = document.querySelector('#modal');
 document.body.addEventListener('click', function(e){
     if(modal.classList.contains('active')){
