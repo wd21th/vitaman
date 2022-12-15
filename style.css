@@ -505,3 +505,7 @@ body .bg:nth-child(1) .container {
 .benefits__wrapper .benefits__item:last-child {
     margin-bottom: 0;
 }
+
+.swal-button {
+    background: #06B04D;
+}
