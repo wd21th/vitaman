@@ -38,8 +38,11 @@ form.addEventListener('submit', function(e){
     const chatId = '-1001860607109';
     const testChatId = '660419791'
     // ватсап сссылка
-    const text = `👨🏻‍💻Имя: ${formData.get('name')} 
-    📞Телефон: ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
+    // const text = `👨🏻‍💻Имя: ${formData.get('name')} 
+    // 📞Телефон: ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
+    const text = `${formData.get('name')}, ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
+
+
     const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
 
     // ===========================================
