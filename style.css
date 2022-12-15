@@ -412,7 +412,7 @@ body .bg:nth-child(1) .container {
     padding-top: 86px;
     padding-bottom: 86px;
 }.reviews__header{
-    font-family: 'Abhaya Libre' , sans-serif;
+    font-family: 'Open Sans' , sans-serif;
     font-weight: 700;
     font-size: calc(26px + 16 * (100vw / 1280));
     display: flex;
@@ -441,7 +441,7 @@ body .bg:nth-child(1) .container {
 .order{
     padding-top: 42px;
     padding-bottom: 42px;
-    /* font-family: 'Abhaya Libre' , sans-serif; */
+    /* font-family: 'Open Sans' , sans-serif; */
     font-family: 'Open Sans' , sans-serif;
 }
 
