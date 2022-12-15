@@ -64,3 +64,21 @@ phoneNumber.addEventListener('keyup', function(e){
         }
     // }
 })
+
+
+const inputName = document.querySelector('#name');
+inputName.addEventListener('input', function(e){
+    if(e.inputType != "deleteContentBackward"){
+        let value = e.target.value;
+        if(value.length > 0){
+            this.classList.remove('error');
+        }
+    }
+})
+
+inputName.addEventListener('keyup', function(e){
+    let value = e.target.value;
+    if(!value.length){
+        this.classList.add('error');
+    }
+})
