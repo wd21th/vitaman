@@ -56,7 +56,7 @@ form.addEventListener('submit', function(e){
 
 
 
-    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${testChatId}&parse_mode=html&text=${text}`, {
+    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${text}`, {
         method: 'POST',
         body: formData
     })
