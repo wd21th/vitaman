@@ -51,6 +51,17 @@ form.addEventListener('submit', function(e){
     if(!this.querySelector('.error')){
         const chatId = '-1001860607109';
         const testChatId = '660419791'
+
+        // get utm_source
+        let utm_source = new URLSearchParams(window.location.search).get('utm_source');
+        
+        
+        // if utm_source is null, set it to 'Сайт'
+        if(utm_source == null){
+            utm_source = 'Сайт';
+        }
+
+        
         // ватсап сссылка
         // const text = `👨🏻‍💻Имя: ${formData.get('name')} 
         // 📞Телефон: ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
@@ -62,7 +73,7 @@ form.addEventListener('submit', function(e){
         // ===========================================
         const website = 'https://script.google.com/macros/s/AKfycbziFrREB7JfQW4HfFEIiv_X1V5ewjHjLy-m91NaM74UHy_7YQlXFGIengy_ubUn1zU_2A/exec'
 
-        const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}`
+        const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}&utm_source=${utm_source}`
         fetch(website + query, {
             method: 'GET',
             headers: {
@@ -77,18 +88,40 @@ form.addEventListener('submit', function(e){
         })
         // ===========================================
 
+        // send message to telegram: name and phone number and utm_source as Promise
 
-
-        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${text}`, {
+        // use Promise.all to send message to telegram
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${'============='}`, {
             method: 'POST',
             body: formData
-        })
-        .then(function(response){
-            
-            swal("Ушпешно!", "Мы свяжемся с вами в ближайшее время", "success");
-            form.reset();
-        })
-        .catch(function(error){
+        }).then(function(response){
+            Promise.all([
+                
+                fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${formData.get('name')}`, {
+                    method: 'POST',
+                    body: formData
+                }),
+                fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${
+                    formData.get('phoneNumber')}
+                `, {
+                    method: 'POST',
+                    body: formData
+                }),
+                fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${utm_source}`, {
+                    method: 'POST',
+                    body: formData
+                })
+    
+            ]).then(function(response){
+                swal("Ушпешно!", "Мы свяжемся с вами в ближайшее время", "success");
+                form.reset();
+
+                fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${'============='}`, {
+                    method: 'POST',
+                    body: formData
+                }).then(function(response){})
+
+            })
             
         })
     }

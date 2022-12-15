@@ -35,7 +35,7 @@ phoneNumber.addEventListener('input', function(e){
             }else {
                 // remove first digit
                 digits = digits.slice(1);
-                console.log('digits :', digits);
+                
                 field.value = '+7 ' + digits
             }
             
