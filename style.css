@@ -569,7 +569,7 @@ input.error + span {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.agreement a{
+.agreement a.policy{
     text-decoration: underline;
 }
 .agreement *{
