@@ -296,7 +296,7 @@ body .bg:nth-child(1) .container {
     font-size: calc(26px + 16 * (100vw / 1280));;
     color: #42682A;
 
-    font-family: Raleway, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 32px;
 }
 
@@ -333,7 +333,7 @@ body .bg:nth-child(1) .container {
     margin: 0 35px;
 
 }.they-choose{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     text-transform: uppercase;
 
