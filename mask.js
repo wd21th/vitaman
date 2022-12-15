@@ -53,10 +53,10 @@ phoneNumber.addEventListener('input', function(e){
 });
 
 phoneNumber.addEventListener('keyup', function(e){
-    if(e.inputType == "deleteContentBackward") {
+    // if(e.inputType == "deleteContentBackward") {
         if(!this.value.length){
             this.classList.add('error');
             this.nextElementSibling.innerHTML = 'Телефон номеріңізді енгізіңіз';
         }
-    }
+    // }
 })
