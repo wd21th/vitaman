@@ -76,7 +76,7 @@ form.addEventListener('submit', function(e){
         // ватсап сссылка
         // const text = `👨🏻‍💻Имя: ${formData.get('name')} 
         // 📞Телефон: ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
-        const text = `${formData.get('name')}%0A${formData.get('phoneNumber').trim()}%0A${utm_source}`;
+        const text = `${formData.get('name')}%0A${formData.get('phoneNumber').replace(/\D/, '')}%0A${utm_source}`;
 
 
         const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
