@@ -1,9 +1,9 @@
-const modal = document.querySelector('#modal');
 document.body.addEventListener('click', function(e){
+    const modal = document.querySelector('.modal.active');
     if(modal.classList.contains('active')){
         modal.classList.remove('active');
 
-	    var iframe = document.querySelector( 'iframe');
+	    var iframe = modal.querySelector( 'iframe');
         if ( iframe ) {
             // after 500ms, set the src attribute to the same value
             // this will reload the iframe
@@ -22,18 +22,12 @@ const playBtns = document.querySelectorAll('.people__play');
 for(let i=0; i<playBtns.length; i++){
     playBtns[i].addEventListener('click', function(e){
         e.stopPropagation();
-        
-        modal.classList.add('active');
-        
-        
+        if(!document.querySelector('.modal.active')){
+            const modal = document.querySelector('.modal'+'.modal-'+(i+1));
+            modal.classList.add('active');
+        }
     })
 }
-
-// playBtns.forEach(function(btn){
-//     btn.addEventListener('click', function(e){
-        
-//     })
-// })
 
 const form = document.querySelector('form');
 form.addEventListener('submit', function(e){
