@@ -57,8 +57,6 @@ setTimeout(() => {
         
     
     let digits = phoneNumber.value.replace(/\D/g, '');
-    console.log('e.target.value :', e.target.value);
-    console.log('digits :', digits);
     const field = e.target;
     
     if(digits.length == 4){
@@ -78,9 +76,9 @@ setTimeout(() => {
         phoneNumber.value = digits.replace(secondStage, '+7 $2 $3 $4');
     }
     else if(digits.length > 11){
-        console.log('digits.length :', digits.length);
-        console.log('digits :', digits);
-        console.log("It works")
+        
+        
+        
         digits = digits.slice(0, 11);
         phoneNumber.value = digits.replace( /(\d{1})(\d{3})(\d{3})(\d{4})/, '+7 $2 $3 $4')
     }
@@ -96,7 +94,7 @@ setTimeout(() => {
         
     }
 
-    console.log('digits :', digits);
+    
     if(digits.length < 11){
         this.classList.add('error');
         this.nextElementSibling.innerHTML = '11 сан теріңіз';
