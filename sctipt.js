@@ -1,5 +1,6 @@
 document.body.addEventListener('click', function(e){
     const modal = document.querySelector('.modal.active');
+    if (!modal) return;
     if(modal.classList.contains('active')){
         modal.classList.remove('active');
 
@@ -57,16 +58,29 @@ form.addEventListener('submit', function(e){
         const chatId = '-1001860607109';
         const testChatId = '660419791'
 
+        const urlSearchParams = new URLSearchParams(window.location.search);
         // get utm_source
-        let utm_source = new URLSearchParams(window.location.search).get('utm_source');
+        let queryParams = [];
+
+        urlSearchParams.forEach((value, key) => {
+            queryParams.push({
+                key,
+                value
+            });
+        })
         
         
         // if utm_source is null, set it to 'Сайт'
-        if(utm_source == null){
-            utm_source = 'Сайт';
+        if (!queryParams.length){
+            queryParams.push({
+                key: 'utm_source',
+                value: 'Сайт'
+            });
         }
 
         
+        const queryParamsText = queryParams.map(item => `${item.key}: ${item.value}`).join('%0A');
+        const queryParamsString = queryParams.map(item => `${item.key}=${item.value}`).join('&');
         // ватсап сссылка
         // const text = `👨🏻‍💻Имя: ${formData.get('name')} 
         // 📞Телефон: ${formData.get('phoneNumber')} https://wa.me/${formData.get('phoneNumber').replace(/\D/g, '')}`;
@@ -75,26 +89,20 @@ form.addEventListener('submit', function(e){
         // replace first 7 with 8
         phTrim = phTrim.replace(/^7/, '8');
         phTrim = phTrim.replace( /(\d{1})(\d{3})(\d{3})(\d{4})/, '8-$2-$3-$4');
-        const text = `${formData.get('name')}%0A${phTrim}%0A${utm_source}`;
-
+        const text = `${formData.get('name')}%0A${phTrim}%0A${queryParamsText}`;
 
         const token = '5907176700:AAEgfGrnIodBznWdIS9Fh_N5lYmEHA8Yfws';
 
         // ===========================================
         const website = 'https://script.google.com/macros/s/AKfycbziFrREB7JfQW4HfFEIiv_X1V5ewjHjLy-m91NaM74UHy_7YQlXFGIengy_ubUn1zU_2A/exec'
 
-        const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}&utm_source=${utm_source}`
+        const query = `?name=${formData.get('name')}&phoneNumber=${formData.get('phoneNumber')}&${queryParamsString}`
         fetch(website + query, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
             }, 
             mode: 'no-cors'
-        }).then(function(response){
-            
-        }
-        ).catch(function(error){
-            
         })
         // ===========================================
 
